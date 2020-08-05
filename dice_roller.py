@@ -7,8 +7,12 @@ dice_sum = 0
 
 def main():
   roll = random.randint(1,6)
-
-  print(f"you rolled a {roll}")
+  if roll == 1:
+    print(f"you rolled a {roll}! Critical Fail")
+  elif roll == 6:
+    print(f"you rolled a {roll}! Critical Success")
+  else:
+    print(f"you rolled a {roll}")
   return roll
 
 for i in range (0,dice_rolls):
