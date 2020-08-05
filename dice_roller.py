@@ -4,8 +4,8 @@ import random
 #add user input
 dice_rolls = int(input("How many times? "))
 dice_side = int(input("How many sides? "))
-#add sum
-dice_sum = 0
+dice_user = int(input("How many user? "))
+
 #def funtion
 def main(dice_side):
   roll = random.randint(1,dice_side)
@@ -16,10 +16,11 @@ def main(dice_side):
   else:
     print(f"you rolled a {roll}")
   return roll
-
-for i in range (0,dice_rolls):
-  if __name__== "__main__":
-    dice_sum = dice_sum + main(dice_side)
-
-#print sum
-print(f'You have rolled a total of {dice_sum}')
+#main program
+for a in range (0,dice_user):
+  dice_sum = 0
+  for i in range (0,dice_rolls):
+    if __name__== "__main__":
+      dice_sum = dice_sum + main(dice_side)
+  #print sum
+  print(f'User {a+1} rolled a total of {dice_sum}')
